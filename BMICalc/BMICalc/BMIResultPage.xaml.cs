@@ -6,7 +6,7 @@ public partial class BMIResultPage : ContentPage
 	{
 		InitializeComponent();
 		LblBMI.Text = $"{bmi:F2}";
-		LblBMIMessage.Text = $"Your are {GetResult(bmi)}!";
+		LblBMIMessage.Text = $"You are {GetResult(bmi)}!";
 	}
 
     private string GetResult(double bmi)
