@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMICalc.BMIResultPage">
+    <VerticalStackLayout Spacing="20"
+                         Margin="20">
+
+        <Label Text="Your Summary"
+               FontSize="Large"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               TextColor="Black"/>
+        <Frame HorizontalOptions="Center"
+               Padding="50"
+               BorderColor="DarkRed">
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Your BMI is"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       FontSize="Medium"/>
+                <Label TextColor="DarkRed"
+                       HorizontalOptions="Center"
+                       FontSize="Large"
+                       x:Name="LblBMI"/>
+                <Label TextColor="Black"
+                       HorizontalOptions="Center"
+                       FontSize="Body"
+                       x:Name="LblBMIMessage"/>
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

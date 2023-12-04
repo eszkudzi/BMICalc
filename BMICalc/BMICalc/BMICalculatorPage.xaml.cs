@@ -24,7 +24,7 @@ public partial class BMICalculatorPage : ContentPage
         double height = double.Parse (LblHeight.Text);
         double weight = double.Parse(LblWeight.Text);
 
-        double bmi = (weight / height / height) * 1000;
-        DisplayAlert("Your BMI is", bmi.ToString(), "cancel");
+        double bmi = (weight / height / height) * 10000;
+        Navigation.PushAsync(new BMIResultPage(bmi));
     }
 }

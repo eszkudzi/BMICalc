@@ -4,7 +4,8 @@
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="True"
              x:Class="BMICalc.BMICalculatorPage"
-             Title="BMICalculatorPage">
+             Title="BMICalculatorPage"
+             NavigationPage.HasNavigationBar="False">
 
     <Grid RowDefinitions="20,*,*,*,*"
           ColumnDefinitions="*,*"
@@ -66,7 +67,7 @@
                Grid.ColumnSpan="2"
                CornerRadius="10"
                Padding="10">
-            <VerticalStackLayout Spacing="10">
+            <VerticalStackLayout Spacing="5">
                 <Label Text="Height (cm)"
                        TextColor="Black"
                        HorizontalOptions="Center"
@@ -91,7 +92,7 @@
                Grid.ColumnSpan="2"
                CornerRadius="10"
                Padding="10">
-            <VerticalStackLayout Spacing="10">
+            <VerticalStackLayout Spacing="5">
                 <Label Text="Weight (kg)"
                        TextColor="Black"
                        HorizontalOptions="Center"

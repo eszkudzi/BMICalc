@@ -6,7 +6,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new BMICalculatorPage();
+		MainPage = new NavigationPage(new BMICalculatorPage());
 	}
 }
 
