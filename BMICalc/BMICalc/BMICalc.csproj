@@ -68,9 +68,13 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\female.png" />
 	  <None Remove="Resources\Images\male.png" />
+	  <None Remove="ViewModel\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\female.png" />
 	  <BundleResource Include="Resources\Images\male.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ViewModel\" />
 	</ItemGroup>
 </Project>

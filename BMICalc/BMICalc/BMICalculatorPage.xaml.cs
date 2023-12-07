@@ -1,11 +1,15 @@
-﻿namespace BMICalc;
+﻿using BMICalc.ViewModel;
+
+namespace BMICalc;
 
 public partial class BMICalculatorPage : ContentPage
 {
 	public BMICalculatorPage()
 	{
         InitializeComponent();
-	}
+        BindingContext = new BMICalculatorPageViewModel();
+
+    }
 
 	private void TapMale_Tapped(object sender, TappedEventArgs e)
 	{
@@ -19,12 +23,5 @@ public partial class BMICalculatorPage : ContentPage
         FrameMale.BorderColor = Color.FromArgb("#474747");
     }
 
-    void BtnCalcBMI_Clicked(System.Object sender, System.EventArgs e)
-    {
-        double height = double.Parse (LblHeight.Text);
-        double weight = double.Parse(LblWeight.Text);
 
-        double bmi = (weight / height / height) * 10000;
-        Navigation.PushAsync(new BMIResultPage(bmi));
-    }
 }

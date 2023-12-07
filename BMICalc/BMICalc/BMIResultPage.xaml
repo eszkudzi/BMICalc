@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:BMICalc.ViewModel"
+             x:DataType="viewmodel:BMIResultPageViewModel"
              x:Class="BMICalc.BMIResultPage">
     <VerticalStackLayout Spacing="20"
                          Margin="20">
@@ -22,11 +24,13 @@
                 <Label TextColor="DarkRed"
                        HorizontalOptions="Center"
                        FontSize="Large"
-                       x:Name="LblBMI"/>
+                       x:Name="LblBMI"
+                       Text="{Binding UserBMI}"/>
                 <Label TextColor="Black"
                        HorizontalOptions="Center"
                        FontSize="Body"
-                       x:Name="LblBMIMessage"/>
+                       x:Name="LblBMIMessage"
+                       Text="{Binding BMIMessage}"/>
 
             </VerticalStackLayout>
         </Frame>
