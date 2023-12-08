@@ -1,12 +1,14 @@
-﻿namespace BMICalc;
+﻿using BMICalc.View;
+
+namespace BMICalc;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
 
-		MainPage = new NavigationPage(new BMICalculatorPage());
-	}
+        MainPage = new NavigationPage(new BMICalculatorPage());
+    }
 }
 

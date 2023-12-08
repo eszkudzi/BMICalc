@@ -33,7 +33,7 @@ namespace BMICalc.ViewModel
             return false;
         }
 
-        public BMIResultPageViewModel()
+        public BMIResultPageViewModel(double bmi)
 		{
             UserBMI = $"{bmi:F2}";
 		    BMIMessage = $"You are {GetResult(bmi)}!";

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:BMICalc.ViewModel"
              x:DataType="viewmodel:BMIResultPageViewModel"
-             x:Class="BMICalc.BMIResultPage">
+             x:Class="BMICalc.View.BMIResultPage">
     <VerticalStackLayout Spacing="20"
                          Margin="20">
 

@@ -1,6 +1,6 @@
 ﻿using BMICalc.ViewModel;
 
-namespace BMICalc;
+namespace BMICalc.View;
 
 public partial class BMICalculatorPage : ContentPage
 {

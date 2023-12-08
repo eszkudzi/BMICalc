@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:viewmodel="clr-namespace:BMICalc.ViewModel"
+             x:DataType="viewmodel:BMICalculatorPageViewModel"
              ios:Page.UseSafeArea="True"
-             x:Class="BMICalc.BMICalculatorPage"
+             x:Class="BMICalc.View.BMICalculatorPage"
              Title="BMI Calculator"
              NavigationPage.HasNavigationBar="False">
 
@@ -72,18 +74,17 @@
                        TextColor="Black"
                        HorizontalOptions="Center"
                        FontSize="Body"/>
-                <Slider ThumbColor="DarkRed"
+                <Slider x:Name="SliderHeight"
+                        ThumbColor="DarkRed"
                         MinimumTrackColor="DarkRed"
                         MaximumTrackColor="LightGrey"
-                        x:Name="SliderHeight"
                         Minimum="0"
                         Maximum="200"
-                        Value="100"/>
+                        Value="{Binding HeightSliderValue}"/>
                 <Label HorizontalOptions="Center"
                        FontSize="Medium"
                        FontAttributes="Bold"
-                       Text="{Binding Source={x:Reference SliderHeight},Path=Value,StringFormat='{0:F0}'}"
-                       x:Name="LblHeight"/>
+                       Text="{Binding HeightSliderValue}"/>
             </VerticalStackLayout>
         </Frame>
 
@@ -103,11 +104,11 @@
                         x:Name="SliderWeight"
                         Minimum="0"
                         Maximum="200"
-                        Value="50"/>
+                        Value="{Binding WeightSliderValue}"/>
                 <Label HorizontalOptions="Center"
                        FontSize="Medium"
                        FontAttributes="Bold"
-                       Text="{Binding Source={x:Reference SliderWeight},Path=Value,StringFormat='{0:F0}'}"
+                       Text="{Binding WeightSliderValue}"
                        x:Name="LblWeight"/>
             </VerticalStackLayout>
         </Frame>
