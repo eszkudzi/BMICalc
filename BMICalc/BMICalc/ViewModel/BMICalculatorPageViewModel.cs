@@ -8,14 +8,14 @@ namespace BMICalc.ViewModel
 {
     public class BMICalculatorPageViewModel : INotifyPropertyChanged
     {
-        private double heightSliderValue;
+        private double heightSliderValue = 150;
 
         public double HeightSliderValue {
             get => heightSliderValue;
             set => SetProperty(ref heightSliderValue, value);
         }
 
-        private double weightSliderValue;
+        private double weightSliderValue = 50;
 
         public double WeightSliderValue {
             get => weightSliderValue;
